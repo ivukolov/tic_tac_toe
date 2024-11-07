@@ -4,6 +4,7 @@ class Board:
     # Пробелы - это пустые клетки.
     def __init__(self):
         self.board = [[' ' for _ in range(3)] for _ in range(3)]
+        self.field_size = 3
 
     # Метод, который обрабатывает ходы игроков.
     def make_move(self, row, col, player):
