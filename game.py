@@ -47,10 +47,14 @@ def main():
         game.display()
 
         if game.check_win(current_player):
+            result = f'Победили {current_player}.'
             print(f'Победили {current_player}.')
+            game.save_result(result)
             running = False
         elif game.is_board_full():
             print('Ничья!')
+            result = 'Ничья!'
+            game.save_result(result)
             running = False
 
         current_player = 'O' if current_player == 'X' else 'X'

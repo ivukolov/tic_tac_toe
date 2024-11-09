@@ -43,4 +43,7 @@ class Board:
             return True
 
         return False
-
+  
+    def save_result(self, result):
+        with open('result.txt', 'a') as f:
+            f.write(f'{result}\n')
